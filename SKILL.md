@@ -1,6 +1,6 @@
 ---
 name: brouter
-description: "Generate GPX bike routes via brouter.de. Use when the user wants a bike route as a GPX file between two places, optionally specifying a routing profile."
+description: "Generate GPX bike routes via brouter.de. Use when the user wants a bike route as a GPX file between two places, optionally specifying a routing profile. https://github.com/si-gr/brouter-skill"
 ---
 
 # brouter
@@ -53,7 +53,8 @@ When this skill is triggered, the agent should **first derive coordinates** from
 
 Once you have `start` and `end` as `lon,lat` strings and a chosen `profile`, use the `index.js` as follows:
 
-```cd workspace/skills/brouter && node -e "(async () => { const run = require('./index'); const result = await run({ start: '<lon>,<lat>', end: '<lon>,<lat>', profile: '<profile>' }); console.log(result); })().catch(err => console.error(err));"
+```
+cd workspace/skills/brouter && node -e "(async () => { const run = require('./index'); const result = await run({ start: '<lon>,<lat>', end: '<lon>,<lat>', profile: '<profile>' }); console.log(result); })().catch(err => console.error(err));"
 ```
 
 Reply to the user with the response file found in routes/ folder.
